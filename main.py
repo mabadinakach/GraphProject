@@ -1,7 +1,4 @@
 from Graph import Graph
-from Vertex import Vertex
-
-
 
 data = [
     {
@@ -23,10 +20,10 @@ data = [
     {
         "name": "FEW 2.3",
         "prerequisites": ["FEW 1.2", "WEB 1.1"]
-    }
+    },
 ]
 
 g = Graph(data)
 
-print(g.numPrereqs("WEB 1.0"))
+print(g.numPrereqs("TEST"))
 print(g.traverse("FEW 2.3", "WEB 1.0"))

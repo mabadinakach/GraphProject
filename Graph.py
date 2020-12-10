@@ -28,8 +28,10 @@ class Graph:
 
         return paths
     
-    def numPrereqs(self, data):
-        paths = []
+    def numPrereqs(self, data, paths=[], visited=[]):
         for i in self.graph_dict[data]:
-            paths.append(i)
-        return len(paths)
+            if i is not None:
+                self.numPrereqs(i)
+                if i not in paths:
+                    paths.append(i)
+        return paths
