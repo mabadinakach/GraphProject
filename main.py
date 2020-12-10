@@ -25,5 +25,5 @@ data = [
 
 g = Graph(data)
 
-print(g.numPrereqs("TEST"))
+print(g.numPrereqs("FEW 2.3"))
 print(g.traverse("FEW 2.3", "WEB 1.0"))
